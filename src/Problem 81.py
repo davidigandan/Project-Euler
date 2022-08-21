@@ -52,15 +52,16 @@ class linked_list:
         while currentNode is not None:
             print(currentNode.data)
             currentNode=currentNode.next
+
+
     
 
 mylist=linked_list()
+
 
 for element in array:
     mylist.insertEnd(Node(element))
 
 mylist.traversal()
-
-
 #runtime printer
 print("--- %s seconds ---" % (time.time() - start_time))
