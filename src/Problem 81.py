@@ -28,19 +28,6 @@ class linked_list:
         self.head.next = tempNode        
         #del tempNode
 
-
-    def insertAt(self, newNode, position):
-        currentNode=self.head
-        currentPosition=0
-        while True:
-            if currentPosition == position:
-                previousNode.next=newNode
-                newNode.next=currentNode
-                break
-            previousNode=currentNode
-            currentNode=currentNode.next
-            currentPosition += 1
-
     def deleteEnd(self):
         lastNode=self.head
         while lastNode.next is not None:
@@ -48,45 +35,12 @@ class linked_list:
             lastNode=lastNode.next
         prevNode.next=None
 
-    
-
-    def deleteAt(self, position):
-        currentNode=self.head
-        currentPosition=0
-        while True:
-            if currentPosition == position:
-                prevNode.next=currentNode.next
-                currentNode.next=None
-                break
-            prevNode=currentNode
-            currentNode=currentNode.next
-            currentPosition +=1
-
-          
-            
-
-    def isEmpty(self):
-        if self.head is None:
-            return True
-        else:
-            return False
-
     def traversal(self):
         currentNode=self.head
         while currentNode is not None:
             print(currentNode.data)
             currentNode=currentNode.next
     
-
-    def deleteHead(self):
-        if self.isEmpty() is False:
-            prevHead=self.head
-            self.head=self.head.next
-            prevHead.next=None
-            print("The first item is deleted successfully")
-        else:
-            print("Linked List is empty, Delete Failed")
-      
     
 FirstNode=Node(2)
 mylist=linked_list()
