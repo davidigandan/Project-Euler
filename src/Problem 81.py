@@ -1,9 +1,12 @@
 import numpy as np
 import time
-
-
-
 start_time = time.time()
+
+
+
+array=np.loadtxt(open("problem81_matrix.txt", "r"), delimiter=",")
+print(array)
+
 
 class Node:
     def __init__(self,data):
