@@ -6,7 +6,7 @@ start_time = time.time()
 
 array=np.loadtxt(open("problem81_matrix.txt", "r"), delimiter=",")
 array=array.astype('int16')
-print(array)
+#print(array)
 
 
 class Node:
@@ -60,7 +60,8 @@ mylist=linked_list()
 
 
 for element in array:
-    mylist.insertEnd(Node(element))
+    for sub_element in element:
+        mylist.insertEnd(Node(element))
 
 mylist.traversal()
 #runtime printer
