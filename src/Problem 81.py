@@ -5,6 +5,7 @@ start_time = time.time()
 
 
 array=np.loadtxt(open("problem81_matrix.txt", "r"), delimiter=",")
+array=array.astype('int16')
 print(array)
 
 
@@ -52,10 +53,12 @@ class linked_list:
             print(currentNode.data)
             currentNode=currentNode.next
     
-    
-FirstNode=Node(2)
+
 mylist=linked_list()
-mylist.insertEnd(FirstNode)
+
+for element in array:
+    mylist.insertEnd(Node(element))
+
 mylist.traversal()
 
 
