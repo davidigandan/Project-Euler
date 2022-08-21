@@ -1,12 +1,17 @@
 import numpy as np
 import time
-start_time = time.time()
 
+
+
+start_time = time.time()
 
 class Node:
     def __init__(self,data):
         self.data = data
         self.next = None
+        self.down = None
+        self.left = None
+        self.up = None
         
 
 class linked_list:
@@ -50,4 +55,6 @@ mylist=linked_list()
 mylist.insertEnd(FirstNode)
 mylist.traversal()
 
+
+#runtime printer
 print("--- %s seconds ---" % (time.time() - start_time))
