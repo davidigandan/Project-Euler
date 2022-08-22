@@ -49,9 +49,12 @@ class linked_list:
 
     def traversal(self):
         currentNode=self.head
+        counter=0
         while currentNode is not None:
             print(currentNode.data)
             currentNode=currentNode.next
+            counter+=1
+        print(counter)
 
 
     
