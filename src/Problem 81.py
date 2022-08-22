@@ -17,7 +17,7 @@ class Node:
         self.left = None
         self.up = None
         
-
+#template for linked list
 class linked_list:
     def __init__(self):
         self.head=None
@@ -58,10 +58,10 @@ class linked_list:
 
 mylist=linked_list()
 
-
+#iterates through array form a node
 for element in array:
     for sub_element in element:
-        mylist.insertEnd(Node(element))
+        mylist.insertEnd(Node(sub_element))
 
 mylist.traversal()
 #runtime printer
